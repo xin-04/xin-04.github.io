@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POPULARCATS>
+    <CAT>
+        <BREED>Ragdoll</BREED>
+        <SIZE>Large</SIZE>
+        <ORIGIN>USA</ORIGIN>
+        <COAT>Long</COAT>
+        <LIFESPAN>12-25 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Maine Coon</BREED>
+        <SIZE>Large</SIZE>
+        <ORIGIN>USA</ORIGIN>
+        <COAT>Long</COAT>
+        <LIFESPAN>10-15 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Devon Rex</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Britain</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>14-17 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Exotic Shorthair</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>USA</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>8-11 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Persian</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Turkey and Persia</ORIGIN>
+        <COAT>Long</COAT>
+        <LIFESPAN>8-11 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>British Shorthair</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Britain</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>12-20 yeats</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Abyssinian</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Ethopian</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>14-12 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Domestic Non-Pedigreed Cats</BREED>
+        <SIZE>Varies</SIZE>
+        <ORIGIN>Varies</ORIGIN>
+        <COAT>Varies</COAT>
+        <LIFESPAN>Varies</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Scottish Fold</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Scotland</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>11-14 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Sphynx</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Canada</ORIGIN>
+        <COAT>Hairless</COAT>
+        <LIFESPAN>15+ years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Siberian Forest</BREED>
+        <SIZE>Large</SIZE>
+        <ORIGIN>Russia</ORIGIN>
+        <COAT>Long</COAT>
+        <LIFESPAN>11-18 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>American Shorthair</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>USA</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>15+ years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Bengal Cat</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>USA</ORIGIN>
+        <COAT>Short or Long</COAT>
+        <LIFESPAN>12-20 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Russian Blue</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Russia</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>10-20+ years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Norwegian Forest Cat</BREED>
+        <SIZE>Large</SIZE>
+        <ORIGIN>Scandinavian</ORIGIN>
+        <COAT>Long</COAT>
+        <LIFESPAN>13+ years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Oriental Shorthair</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Britain</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>10-20 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Siamese</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Thailand</ORIGIN>
+        <COAT>Short</COAT>
+        <LIFESPAN>10-20 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Cornish Rex</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Britain</ORIGIN>
+        <COAT>Short and Curly</COAT>
+        <LIFESPAN>9-13 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Selkirk Rex</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>USA</ORIGIN>
+        <COAT>Short or Long</COAT>
+        <LIFESPAN>10-15 years</LIFESPAN>
+    </CAT>
+    <CAT>
+        <BREED>Birman</BREED>
+        <SIZE>Medium</SIZE>
+        <ORIGIN>Burma</ORIGIN>
+        <COAT>Long</COAT>
+        <LIFESPAN>9-15 years</LIFESPAN>
+    </CAT>
+</POPULARCATS>

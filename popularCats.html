@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Top 20 Popular Cats</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="catpaw.jpg" type="image/jpg">
+        <style>
+            table,th,td{
+                border:1px solid black;
+                border-collapse:collapse;
+                background-color: rgb(232, 233, 227);
+            }
+            th,td{
+                padding:5px;
+            }
+            body{
+                background-color: #f2dac4;
+                margin-top: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            h1{
+                text-align: center;
+            }
+            p{
+                text-align: justify;
+                font-size: 18px;
+            }
+            hr{
+                size: 50%;
+                align-self: center;
+                border: 1px solid rgb(0, 0, 0)
+            }
+            img{
+                border-radius: 8px;
+            }
+            font{
+                color: rgb(19, 19, 111);
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="happycat.gif" alt="Happy" width="50px" height="50px">
+        <h1>Top 20 Popular Cats</h1>
+        <p><a name="point">Around</a> 9,000 years ago, these adorable felines were domesticated as pets.
+            Cats were appreciated for their ability to control the rodent population, and wild cats
+            were attracted to human settlements with abundance of rodents. Gradually, humans and wild cats        
+            have formed a mutually beneficial relationship, which leads to a close relationship between
+            humans and pet cats now. Throughout the years of natural and selective breeding, numerous
+            cat breeds can be found all around the globe. Below is a table that lists down top 20 popular cat
+            breeds today.</p>
+        <hr>
+        <center>
+            <button type="button" onclick="loadXMLDoc()">Popular Cats List</button>
+            <br><br>
+            <table id="cats_table"></table>
+            <br><br><br>
+            <img src="catstretch.gif" alt="Happy Cat Stretch"><br>
+            <font><i>Happy Cat!</i></font>
+            <br><br>
+            <a href="#point">Click me to go back to top of the page</a>
+            <br><br><br>
+            <hr>
+            <a href="mailto:chayxinying422@gmail.com">Contact Me</a>
+        </center>
+
+        <script>
+            function loadXMLDoc(){
+                let xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200){
+                        xmlFunction(this);
+                    }
+                };
+                xmlhttp.open("GET", "cats.xml", true);
+                xmlhttp.send();
+            }
+            function xmlFunction(xml){
+                var i;
+                var xmlDoc = xml.responseXML;
+                var table="<tr><th>Breed</th><th>Size</th><th>Origin</th><th>Coat</th><th>Lifespan</th></tr>";
+                var x = xmlDoc.getElementsByTagName("CAT");
+                for(i=0; i<x.length; i++){
+                    table += "<tr><td>"+
+                        x[i].getElementsByTagName("BREED")[0].childNodes[0].nodeValue + "</td><td>"+
+                        x[i].getElementsByTagName("SIZE")[0].childNodes[0].nodeValue + "</td><td>"+
+                        x[i].getElementsByTagName("ORIGIN")[0].childNodes[0].nodeValue + "</td><td>"+
+                        x[i].getElementsByTagName("COAT")[0].childNodes[0].nodeValue + "</td><td>"+
+                        x[i].getElementsByTagName("LIFESPAN")[0].childNodes[0].nodeValue + "</td></tr>";
+                }
+                document.getElementById("cats_table").innerHTML = table;
+            } 
+        </script>
+        
+    </body>
+</html>
