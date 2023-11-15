@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Quiz 2</title>
+        <link rel="icon" href="download.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            table{
+            background-color: aliceblue;
+            padding-right: 10px;
+            }
+           .firstcol{
+            background-color: cadetblue;
+            color: azure;
+            padding: 1em;
+           } 
+           .seconcol{
+            padding: 1em;
+           }
+        </style>
+    </head>
+    <body topmargin="50">
+        <center>
+            <form>
+                <h2>Personal details:</h2>
+                <table>
+                    <tr>
+                        <td style class="firstcol">First Name:</td>
+                        <td style class="seconcol"><input type="text" name="fname"></td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Last Name: </td>
+                        <td style class="seconcol"><input type="text" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Gender:</td>
+                        <td style class="seconcol"><input type="radio" name="gender" value="Male">Male
+                            <input type="radio" name="gender" value="Female">Female</td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Choose your favourite subjects:</td>
+                        <td style class="seconcol">
+                            <input type="checkbox" name="fav_sub" value="DCS4103">DCS4103
+                            <input type="checkbox" name="fav_sub" value="DCS3003">DCS3003
+                            <input type="checkbox" name="fav_sub" value="MST1003">MST1003
+                            <input type="checkbox" name="fav_sub" value="MST2003">MST2003
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Address:</td>
+                        <td style class="seconcol"><textarea rows="4" cols="30" name="address"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Date of birth:</td>
+                        <td style class="seconcol"><input type="date" name="dob"></td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Login password:</td>
+                        <td style class="seconcol"><input type="password" name="loginpass"></td>
+                    </tr>
+                    <tr>
+                        <td style class="firstcol">Course:</td>
+                        <td style class="seconcol">
+                            <select>
+                                <option value="0">- List of Courses -</option>
+                                <optgroup label="Diploma in Computer Science">
+                                    <option value="DCS_S1">Semester 1</option>
+                                    <option value="DCS_S2">Semester 2</option>
+                                    <option value="DCS_S3">Semester 3</option>
+                                    <option value="DCS_S4">Semester 4</option>
+                                    <option value="DCS_S5">Semester 5</option>
+                                    <option value="DCS_S6">Semester 6</option>
+                                </optgroup>
+                                <option value="DIB">Diploma in Business</option>
+                                <option value="DAS">Diploma in Airline Services</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table><br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset"></p>
+            </form>
+        </center>
+    </body>
+</html>
