@@ -1,0 +1,61 @@
+h2{
+    margin-top: 4rem;
+    text-align: center;
+    color: #412E27;
+}
+.reg{
+    background-color: #6A704C;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+.loginbtn{
+    border-radius: 10px;
+    background-color: #412E27;
+    color: white;
+    border-style: outset;
+    font-size: large;
+    font-family: Lora;
+    width: 50%;
+}
+.divlogin{
+    text-align: center;
+    background-color: rgba(63, 14, 4, 0);
+}
+input{
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+select{
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+legend{
+    font-size: large;
+    font-weight: bold;
+}
+footer{
+    background-color: var(--brown-color);
+    color: blanchedalmond;
+    padding: 8vh;
+    text-align: center;
+    position: relative;
+}
+.footer-info{
+    justify-content: space-between;
+    font-size: var(--small-font-size);
+    display: flex;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.footer-info a{
+    color: white;
+}
+label{
+    font-family: Fira Sans Extra;
+}
+.login-reg{
+    text-align: center;
+}

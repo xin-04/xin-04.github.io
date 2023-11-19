@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="css/asset/cursor.png" type="image/jpg">
+        <link rel="stylesheet" href="css/login.css" type="text/css">
+        <link rel="stylesheet" href="css/navbar.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    </head>
+    <body>
+        <!--HEADER-->
+        <header class="header-reg">
+            <a href="main.html" class="header-logo"></a>
+            <div class="header-toggle" id="header-toggle"></div>
+            <nav class="reg-nav" id="nav-menu">
+                <div class="nav-content bd-grid">
+                    <div>
+                        <span class="nav-name">grandpa's desk</span>
+                     </div>
+                    <div class="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="main.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-link">Products<img src="css/asset/down-arrow.png"></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a href="stationery.html" class="nav-link">Stationery</a></li>
+                                    <li class="dropdown-item"><a href="art.html" class="nav-link">Art Supply</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link"><img src="css/asset/user.png" alt="user"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h2>Login</h2>
+            <form action="main.html" method="post" target="_self">
+                <div style class="reg"><br>
+                    <fieldset>
+                        <legend>Account</legend>
+                        <label for="login-email">Email Address: </label>
+                        <input type="email" name="login-email" id="login-email" autofocus required><br><br>
+                        <label for="login-pw">Password: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="password" name="login-pw" id="login-pw" required minlength="6"><br>
+                        <br><input type="checkbox" onclick="showpw()">Show Password
+                    </fieldset><br>
+                    <label for="remember">
+                        <input type="checkbox" name="remember" id="remember">
+                        Remember Me
+                    </label>
+                    <br><br>
+                    <div style class="divlogin">
+                        <a href="main.html"><input style class="loginbtn" type="submit" value="Login"></a>
+                    </div>
+                </div>
+            </form>
+            <div class="login-reg"><a href="register.html">Not a member yet?</a></div>
+        </main>
+        <br><br><br>
+        <footer>
+            <div class="footer-info">
+                <div><big>grandpa's desk</big><br><br>24, Jalan Ros Merah 2/11,<br> Taman Johor Jaya,<br> 81100 Johor Bahru, Johor</div>
+                <div>contact no: <a href="tel:+60106651050">010-665 1050</a><br>
+                    email: <a href="mailto:chayxinying422@gmail.com">chayxinying422@gmail.com</a></div>
+            </div>
+        </footer>
+        <script src="js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="css/asset/cursor.png" type="image/jpg">
+        <link rel="stylesheet" href="css/register.css" type="text/css">
+        <link rel="stylesheet" href="css/navbar.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    </head>
+    <body>
+        <!--HEADER-->
+        <header class="header-reg">
+            <a href="main.html" class="header-logo"></a>
+            <div class="header-toggle" id="header-toggle"></div>
+            <nav class="reg-nav" id="nav-menu">
+                <div class="nav-content bd-grid">
+                    <div>
+                        <span class="nav-name">grandpa's desk</span>
+                     </div>
+                    <div class="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="main.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-link">Products<img src="css/asset/down-arrow.png"></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a href="stationery.html" class="nav-link">Stationery</a></li>
+                                    <li class="dropdown-item"><a href="art.html" class="nav-link">Art Supply</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link"><img src="css/asset/user.png" alt="user"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h2>Account Registration</h2>
+            <form action="main.html" method="post" target="_self">
+                <div style class="reg"><br>
+                    <fieldset>
+                        <legend>Account</legend>
+                        <label for="username">Name: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="username" id="username" placeholder="Insert your full name"><br><br>
+                        <label for="register-email">Email Address: </label>
+                        <input type="email" name="register-email" id="register-email" autofocus required>&nbsp;
+                        <label for="register-pw">Password: </label>
+                        <input type="password" name="register-pw" id="register-pw" required minlength="6"><br>
+                        <br><input type="checkbox" onclick="showpw()">Show Password
+                    </fieldset><br>
+                    <fieldset>
+                        <legend for="user-address1">Delivery </legend>
+                        <label for="user-address">Address:</label>
+                        <input type="text" name="user-address1" id="user-address1" placeholder="Address Line 1">
+                        <input typr="text" name="user-address2" id="user-address2" placeholder="Address Line 2"><br><br>
+                        <label for="user-city">City: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="user-city" id="user-city">
+                        <input type="text" name="user-zip" id="user-zip" placeholder="Zipcode"><br><br>
+                        <label for="user-state">State: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select type="text" name="user-state" id="user-state">
+                            <option value="Johor">Johor</option>
+                            <option value="Kedah">Kedah</option>
+                            <option value="Kelantan">Kelantan</option>
+                            <option value="Melaka">Melaka</option>
+                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                            <option value="Pahang">Pahang</option>
+                            <option value="Pulau Pinang">Pulau Pinang</option>                            
+                            <option value="Perak">Perak</option>
+                            <option value="Pulau Pinang">Pulau Pinang</option>
+                            <option value="Perlis">Perlis</option>
+                            <option value="Selangor">Selangor</option>
+                            <option value="Terengganu">Terengganu</option>                               
+                            <option value="Sabah">Sabah</option>
+                            <option value="Sarawak">Sarawak</option>
+                            <option value="KL">W.P.Kuala Lumpur</option>
+                            <option value="Labuan">W.P.Labuan</option>
+                            <option value="Putrajaya">W.P.Putrajaya</option>
+                        </select>
+                    </fieldset>
+                    <br>
+                    <label for="enable-news">
+                        <input type="checkbox" name="enable-news" id="enable-news">
+                        Receive our Latest Newsletter
+                    </label>
+                    <br><br>
+                    <div style class="divsubmit">
+                        <input style class="submitbtn" type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </main>
+        <br><br><br>
+        <footer>
+            <div class="footer-info">
+                <div><big>grandpa's desk</big><br><br>24, Jalan Ros Merah 2/11,<br> Taman Johor Jaya,<br> 81100 Johor Bahru, Johor</div>
+                <div>contact no: <a href="tel:+60106651050">010-665 1050</a><br>
+                    email: <a href="mailto:chayxinying422@gmail.com">chayxinying422@gmail.com</a></div>
+            </div>
+        </footer>
+        <script src="js/register.js"></script>
+    </body>
+</html>

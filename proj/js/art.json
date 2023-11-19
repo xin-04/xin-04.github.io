@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "image": "css/asset/sketchbook.jpg",
+        "title": "Arteza Sketchbook",
+        "price": 60
+    },
+    {
+        "id": 1,
+        "image": "css/asset/knife.jpg",
+        "title": "Art Knife Set",
+        "price": 50
+    },
+    {
+        "id": 2,
+        "image": "css/asset/canvas.jpg",
+        "title": "Arteza Canvas",
+        "price": 60
+    },
+    {
+        "id": 3,
+        "image": "css/asset/brush.jpg",
+        "title": "Brush Set",
+        "price": 75
+    },
+    {
+        "id": 4,
+        "image": "css/asset/paint.jpg",
+        "title": "Oil Paint",
+        "price": 55
+    },
+    {
+        "id": 5,
+        "image": "css/asset/set.jpg",
+        "title": "Complete Oil Paint Set with Case",
+        "price": 95
+    }
+]

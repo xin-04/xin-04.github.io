@@ -1,0 +1,229 @@
+:root{
+    --header-height: 3rem;
+    /*color*/
+    --brown-color: #412E27;
+    --green-color: #6A704C;
+    --body-color: #EDE1D1;
+    /*typo*/
+    --body-font: "Lora";
+    --body-font2: "Fira Sans Extra";
+    --nav-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .785rem;
+    --z-fixed: 100;
+}
+
+/*responsive typo*/
+@media screen and (min-width: 1024px){
+    :root{
+        --nav-font-size: 1rem;
+        --normal-font-size: 1rem;
+    }
+}
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: white;
+    margin: var(--header-height) 0 0 0;
+    font-weight: 600;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header-reg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 1rem;
+    background-color: var(--brown-color);
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.header-logo{
+    width: 200px;
+    height: var(--header-height);
+    padding-left:5px;
+    background-image: url(asset/logowhite.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.header-toggle{
+    width: 20px;
+    height: 20px;
+    background-image: url(asset/menu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*mobile nav*/
+@media screen and (max-width: 768px){
+    .reg-nav{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: var(--brown-color);
+        width: 30%;
+        height: 100vh;
+        padding: 2rem 0;
+        z-index: var(--z-fixed);
+        transition: .5s;
+        overflow-y: auto;
+    }
+}
+.nav-content{
+    display: flex;
+    flex-direction: column;
+}
+.nav-prefil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.nav-name{
+    display: block;
+    font-size: var(--nav-font-size);
+    color: white;
+}
+.nav-item{
+    margin-bottom: 2rem;
+}
+.nav-link{
+    padding-left: 1rem;
+    color: white;
+}
+.nav-link img{
+    width:20px;
+    height:20px;
+}
+.nav-link:hover{
+    color: blanchedalmond;
+}
+/*show menu*/
+.show{
+    left: 0;
+}
+/*active link*/
+.active{
+    color: white;
+}
+/*dropdown*/
+.dropdown-link{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 5rem;
+}
+/*locate down-button at the very right*/
+.dropdown-link img{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+/*create indent for sub elemets*/
+.dropdown-menu{
+    margin: 0 0 0 1rem;
+    display: none;
+}
+.dropdown-item{
+    margin: 1rem 0;
+}
+/* make sub elements appear when hover*/
+.dropdown:hover > .dropdown-menu{
+    display: block;
+}
+
+/*transition from mobile to desktop nav*/
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+    .header{
+        height: calc(var(--header-height) + 1rem)
+    }
+    .header-logo, .header-toggle{
+        display: none;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav-content{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-prefil{
+        flex-direction: row;
+        text-align: initial;
+        margin-bottom: 0;
+    }
+    .nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-item{
+        margin: 0 1.5rem;
+        padding: 1.5rem 0;
+    }
+    .nav-link{
+        color: white;
+    }
+    .nav-link:hover{
+        color:blanchedalmond;
+    }
+    .active{
+        color: white;
+    }
+    .dropdown{
+        position: relative;
+    }
+    .dropdown-menu{
+        position: fixed;
+        margin: 0;
+        top: var(--header-height);
+        padding: .5rem 1.5rem;
+        background-color: var(--brown-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        border-radius: .5rem;
+    }
+    .dropdown-item{
+        margin: .5rem 0;
+    }
+    
+}
+
+@media screen and (min-width: 1024px){
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-menu{
+        margin-left: 23rem;
+    }
+}

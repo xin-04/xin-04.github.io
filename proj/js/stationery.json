@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "image": "css/asset/notebook.jpg",
+        "title": "Vintage Notebook",
+        "price": 25
+    },
+    {
+        "id": 1,
+        "image": "css/asset/fountain-pen.jpg",
+        "title": "Fountain Pen",
+        "price": 20
+    },
+    {
+        "id": 2,
+        "image": "css/asset/ink.jpg",
+        "title": "Trusty Black Ink",
+        "price": 10
+    },
+    {
+        "id": 3,
+        "image": "css/asset/quill.jpg",
+        "title": "Quality Quill",
+        "price": 25
+    },
+    {
+        "id": 4,
+        "image": "css/asset/wax-pattern.jpg",
+        "title": "Wax Seal (4)",
+        "price": 40
+    },
+    {
+        "id": 5,
+        "image": "css/asset/wax.jpg",
+        "title": "Coloured Wax (12)",
+        "price": 60
+    }
+]
