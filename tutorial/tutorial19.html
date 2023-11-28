@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Tutorial 19</title>
+        <link rel="icon" href="rose.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body topmargin="50">
+        <h1>Tutorial 19</h1>
+        <select id="genre_select" name="genre">
+            <option id="mystery" value="mystery" selected>Mystery</option>
+            <option id="sci-fi" value="sci-fi">Sci-Fi</option>
+            <option id="thriller" value="thriller">Thriller</option>
+        </select>
+        <select id="books_select" name="books">
+        </select>
+
+        <script>
+            var select1 = document.getElementById("genre_select");
+            var select2 = document.getElementById("books_select");
+        
+            var options_mystery = ["The Silent Patient", "Crime and Punishment", "The Hound of Baskervilles"];
+            var options_scifi = ["Dune", "Neuromancer", "Frankenstein"];
+            var options_thriller = ["The Silence of The Lamb", "Red Dragon", "The Housemaid"];
+        
+            function updateOptions(){
+                select2.innerHTML = "";
+                var selectedOption = select1.value;
+                var optionsToAdd = [];
+                switch (selectedOption) {
+                    case 'mystery':
+                        optionsToAdd = options_mystery;
+                        break;
+                    case 'sci-fi':
+                        optionsToAdd = options_scifi;
+                        break;
+                    case 'thriller':
+                        optionsToAdd = options_thriller;
+                        break;
+                }
+                optionsToAdd.forEach(function(optionText) {
+                    var option = document.createElement('option');
+                    option.value = optionText.toLowerCase().replace(/ /g, '_'); // Replace all spaces with underscores
+                    option.text = optionText;
+                    select2.add(option);
+                });
+            }
+            
+            select1.addEventListener('change', updateOptions);
+        
+            updateOptions();
+        </script>
+    </body>
+</html>
