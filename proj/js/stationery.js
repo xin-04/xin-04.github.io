@@ -4,9 +4,12 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct')
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
+let total_amt = document.getElementById('total-amt')
 
 let listProduct = [];
 let carts = [];
+let pricetemp = [];
+let total = 0.0;
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
@@ -43,6 +46,7 @@ listProductHTML.addEventListener('click', (event) => {
 
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
+    let itemprice = listProduct.find((value) => value.id == product_id);
     //cart empty
     if(carts.length <= 0){
         carts = [{
@@ -55,9 +59,14 @@ const addToCart = (product_id) => {
             product_id: product_id,
             qty: 1
         });
+        total = itemprice.price;
+        total -= itemprice.price;
     //item alr exists
     }else{
-        carts[positionThisProductInCart].qty = carts[positionThisProductInCart].qty + 1;  
+        carts[positionThisProductInCart].qty = carts[positionThisProductInCart].qty + 1; 
+        total = itemprice.price; 
+        total -= itemprice.price;
+        
     }
     console.log(carts);
     addCartToHTML();
@@ -83,6 +92,7 @@ const addCartToHTML = () => {
             newCart.dataset.id = cart.product_id;
             //to locate data by finding index
             let positionProduct = listProduct.findIndex((value) => value.id == cart.product_id);
+            let itemprice = listProduct.find((value) => value.id == cart.product_id);
             if (positionProduct !== -1) {
             let info = listProduct[positionProduct];
             newCart.innerHTML = 
@@ -97,12 +107,21 @@ const addCartToHTML = () => {
                 <span class="plus">></span>
             </div>`;
             listCartHTML.appendChild(newCart);
+            //pricetemp.add(info.price);
+            
+            total += itemprice.price * (cart.qty);
+            
+            console.log(total);
+            //console.log(pricetemp);
+            
             }else{
                 console.error(`Product with ID ${cart.product_id} not found.`);
             }
-        })
+        }
+        )
     }
     iconCartSpan.innerText = totalQuantity;
+    calcTotal();
 }
 
 //make plus & minus btn in cart usable
@@ -121,19 +140,28 @@ listCartHTML.addEventListener('click', (event) => {
 
 const changeQty = (product_id, type) => {
     let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
+    let info = listProduct[positionItemInCart+1];
     if(positionItemInCart >= 0){
         switch(type){
             case 'plus':
                 carts[positionItemInCart].qty = carts[positionItemInCart].qty + 1;
+                //add price when 'plus'
+                total = info.price;
+                total -= info.price;
                 break;
 
             default:
                 let valueChange = carts[positionItemInCart].qty - 1;
                 if(valueChange > 0){
                     carts[positionItemInCart].qty = valueChange;
+                    //deduct price when 'minus'
+                    total = info.price;
+                    total -= info.price;
                 }else{
                     //delete item in cart with splice
                     carts.splice(positionItemInCart, 1);
+                    total = info.price;
+                    total -= info.price;
                 }
                 break;
         }
@@ -147,6 +175,11 @@ const checkout = () => {
     alert("Thank you for your purchase!");
     location.reload();
 }
+
+const calcTotal = () => {
+    total_amt.innerHTML = total.toFixed(2);
+}
+
 
 const initApp = () => {
     //fetch data from json
