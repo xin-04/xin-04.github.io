@@ -16,7 +16,8 @@ var square,
     base2,
     hook,
     semicircle,
-    smolcircle;
+    smolcircle,
+    scaleFactor;
 
 function setup() {
     createCanvas(1280,720); 
@@ -36,14 +37,14 @@ function preload(){
 function draw(){
     background(bg_color);
     animation();
-    
     if(square.translateX >= width) animation();
 
-    image(img1, width-200, height-(height-10), 200, 100);
+    scaleFactor = map(noise(frameCount * 0.01), 0, 1, 0.1, 1);
+    image(img1, width-200, height-(height-10), 200 * scaleFactor, 100 * scaleFactor);
+
 }
 
-function animation() {
-    
+function animation(){
     noStroke();
 
     push();
@@ -328,6 +329,7 @@ class Face{
             this.angle -= QUARTER_PI / 17.5;
         }else if(squareX >= width/3*2.5){
             this.translateX -= 0;
+            this.translateY = height/5*1.82;
             rotate(this.angle);
         }
     }
