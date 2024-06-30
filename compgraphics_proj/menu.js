@@ -20,7 +20,8 @@ var bird1,
 var button1,
     button2,
     buttonP,
-    buttonR;
+    buttonR,
+    buttonM;
 
 var birdLift = -10;
 
@@ -46,7 +47,6 @@ function preLoad(){
 
 function setup(){
     createCanvas(1280,720);
-
     engine = Engine.create();
     renderMenu = Render.create({
         canvas: canvas,
@@ -146,7 +146,7 @@ function buttonPlay(){
 function map1P(){
 
     generateEnemy();
-
+    backtoMenu();
     alert("button1 is pressed.");
     Composite.remove(engine.world, title);
     Composite.add(engine.world, [bird1, ...enemies]);
@@ -368,3 +368,9 @@ function resetWorld(){
     window.location.reload();
 }
 
+function backtoMenu(){
+    buttonM = createImg('img/home.png');
+    buttonM.position(0, 0);
+    buttonM.size(72 * 1.5, 69 * 1.5);
+    buttonM.mousePressed(resetWorld);
+}
